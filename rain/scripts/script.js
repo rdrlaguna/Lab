@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Hold all particles
     let particles = [];
-    const totalParticles = 1000;
+    const totalParticles = 100;
 
     class Particle {
         constructor() {
@@ -52,7 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     init();
 
-    console.log(particles);
+    /*
+    particles.forEach(particle => {
+        // Test drawing particles
+        particle.draw();
+    })
+    */
     
 
 
