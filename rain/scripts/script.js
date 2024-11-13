@@ -6,11 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     canvas.width = 500;
     canvas.heigth = 700;
 
-    /**/
-
     // Hold all particles
     let particles = [];
-    const totalParticles = 100;
+    const totalParticles = 5000;
 
     class Particle {
         constructor() {
@@ -20,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Particle attributes
             this.speed = 0;
             this.velocity = Math.random() * 3.5;
-            this.size = Math.random() * 10 + 1;
+            this.size = Math.random() * 1.5 + 1;
         }
 
         update() {
@@ -40,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
         }
-
     }
 
     function init() {
@@ -52,14 +49,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     init();
 
-    /*
-    particles.forEach(particle => {
-        // Test drawing particles
-        particle.draw();
-    })
-    */
-    
+    function animate() {
+        // Draw semitransparent rectangle over cnavas
+        ctx.globalAlpha = 0.05;
+        ctx.fillStyle = 'rgb(0, 0, 0)';
+        ctx.fillRect(0, 0, canvas.width, canvas.heigth);
 
+        // Draw each particle in the array
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        })
+        requestAnimationFrame(animate);
+    }
+
+    animate();
 
     
 });
