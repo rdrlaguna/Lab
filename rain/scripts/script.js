@@ -58,6 +58,22 @@ document.addEventListener('DOMContentLoaded', function() {
         particle.draw();
     })
     */
+
+    function animate() {
+        // Draw semitransparent rectangle over cnavas
+        ctx.globalAlpha = 0.05;
+        ctx.fillStyle = 'rgb(0, 0, 0)';
+        ctx.fillRect(0, 0, canvas.width, canvas.heigth);
+
+        // Draw each particle in the array
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+        }
+    }
+
+    animate();
+
     
 
 
