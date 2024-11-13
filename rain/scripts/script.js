@@ -1,10 +1,12 @@
 
-document.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', function() {
     // Canvas configuration
     const canvas = this.getElementById('canvas');
     const ctx = canvas.getContext('2d');
-    canvas.width = 1000;
-    canvas.heigth = 1500;
+    canvas.width = 500;
+    canvas.heigth = 700;
+
+    /**/
 
     // Hold all particles
     let particles = [];
@@ -40,5 +42,19 @@ document.addEventListener('load', function() {
         }
 
     }
+
+    function init() {
+        // Populate the particles array with new particles
+        for (let i = 0; i < totalParticles; i++) {
+            particles.push(new Particle);
+        }
+    }
+
+    init();
+
+    console.log(particles);
+    
+
+
     
 });
