@@ -29,8 +29,16 @@ document.addEventListener('load', function() {
                 this.y = 0;
                 this.x = Math.random() * canvas.width;
             }
-
         }
+
+        draw() {
+            // Draw particle on canvas
+            ctx.beginPath();
+            ctx.fillStyle = 'white';
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
     }
     
 });
