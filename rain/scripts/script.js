@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let particles = [];
     const totalParticles = 5000;
 
-
+    // Hold brigthness value of each px
+    let mappedImage = [];
 
     function init() {
         // Populate the particles array with new particles
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     init();
 
     function animate() {
+        ctx.drawImage(skull, 0, -80, canvas.width, 300);
         // Draw semitransparent rectangle over cnavas
         ctx.globalAlpha = 0.05;
         ctx.fillStyle = 'rgb(0, 0, 0)';
@@ -39,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         requestAnimationFrame(animate);
     }
 
-    // animate();
+    animate();
 
     
 });
