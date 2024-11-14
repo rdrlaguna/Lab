@@ -3,8 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Canvas configuration
     const canvas = this.getElementById('canvas');
     const ctx = canvas.getContext('2d');
-    canvas.width = 500;
-    canvas.heigth = 700;
+    console.log(ctx);
+    canvas.width = canvas.clientWidth;
+    canvas.heigth = canvas.clientHeight;
+
+    // Draw image on canvas
+    ctx.drawImage(skull, 0, -80, canvas.width, 300);
 
     // Hold all particles
     let particles = [];
@@ -35,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         requestAnimationFrame(animate);
     }
 
-    animate();
+    // animate();
 
     
 });
