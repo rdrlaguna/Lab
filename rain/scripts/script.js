@@ -3,12 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Canvas configuration
     const canvas = this.getElementById('canvas');
     const ctx = canvas.getContext('2d');
-    console.log(ctx);
+
     canvas.width = canvas.clientWidth;
     canvas.heigth = canvas.clientHeight;
 
     // Draw image on canvas
     ctx.drawImage(skull, 0, -80, canvas.width, 300);
+    // Scann canvas area for pixel information
+    const pixels = ctx.getImageData(0, 0, canvas.width, canvas.heigth);
 
     // Hold all particles
     let particles = [];
