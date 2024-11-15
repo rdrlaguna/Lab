@@ -1,5 +1,6 @@
-import Pixels from "./pixels.js";
+import Images from "./image.js";
 import Particles from "./particle.js";
+import Pixels from "./pixels.js";
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     canvas.height = 706;
 
     // Draw image on canvas
-    ctx.drawImage(skull, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(Images.skull, 0, 0, canvas.width, canvas.height);
 
     // Get RGBA values for each pixel in canvas
     const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
