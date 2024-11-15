@@ -1,7 +1,10 @@
 // Pixel related functions
 
 
-function calculateBrightness(canvas, pixels, map){
+function calculateBrightness(canvas, pixels){
+
+    let map = []
+
     // Cicle over every pixel row by row
     for (let y = 0; y < canvas.height; y++) {
         // Hold pixels of each row
@@ -12,13 +15,13 @@ function calculateBrightness(canvas, pixels, map){
             const green = pixels.data[(y * 4 * pixels.width) + (x * 4 + 1)];
             const blue = pixels.data[(y * 4 * pixels.width) + (x * 4 + 2)];
             const brightness = relativeBrightness(red, green, blue);
-            const cell = [
-                cellBrightness = brightness,
-            ];
+            const cell = [brightness];
             row.push(cell);
         }
         map.push(row);
     }
+
+    return map;
 }
 
 
@@ -32,3 +35,8 @@ function relativeBrightness(red, green, blue) {
 }
 
 
+const Pixels = {
+    calculateBrightness
+}
+
+export default Pixels;
