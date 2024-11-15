@@ -63,7 +63,7 @@ The repository is organized as follows, allowing for easy addition of future pro
 Lab/
 ├── LICENSE          # License file at the root level
 ├── README.md        # Repository description
-├── rain-effect/     # First creative coding project
+├── rain/            # First creative coding project
 │   ├── index.html   # Main HTML file
 │   ├── script.js    # JavaScript code for the animation
 │   ├── styles.css   # Optional styling (if needed)
