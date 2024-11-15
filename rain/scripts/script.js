@@ -8,12 +8,28 @@ document.addEventListener('DOMContentLoaded', function() {
     canvas.height = 706;
 
     // Draw image on canvas
-    // ctx.drawImage(skull, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(skull, 0, 0, canvas.width, canvas.height);
+    // Get RGBA values for each pixel in canvas
+    const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    console.log(pixels);
 
     // Hold all particles
     let particles = [];
     const totalParticles = 5000;
 
+    // Brigthness map of the image
+    let mappedImage = [];
+    // Cicle over every pixel row by row
+    for (let y = 0; y < canvas.height; y++) {
+        // Hold pixels of each row
+        let row = [];
+        for (let x = 0; x < canvas.width; x++) {
+            // Read RGB values of each pixel
+            const red = pixels.data[(y * 4 * pixels.width) + (x * 4)];
+            const green = pixels.data[(y * 4 * pixels.width) + (x * 4 + 1)];
+            const blue = pixels.data[(y * 4 * pixels.width) + (x * 4 + 2)];
+        }
+    }
 
 
     function init() {
