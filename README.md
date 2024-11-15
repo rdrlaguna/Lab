@@ -61,6 +61,7 @@ The repository is organized as follows, allowing for easy addition of future pro
 
 ``` bash
 Lab/
+├── LICENSE          # License file at the root level
 ├── README.md        # Repository description
 ├── rain-effect/     # First creative coding project
 │   ├── index.html   # Main HTML file
@@ -68,6 +69,7 @@ Lab/
 │   ├── styles.css   # Optional styling (if needed)
 │   └── assets/      # Folder for images and resources
 └── other-projects/  # Placeholder for future projects
+
 
 ```
 
