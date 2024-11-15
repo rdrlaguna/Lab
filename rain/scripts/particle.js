@@ -1,4 +1,4 @@
-
+// Create particle class
 class Particle {
     constructor(canvas) {
         // Particle position

@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Brigthness map of the image
     let mappedImage = [];
+
+    /*
     // Cicle over every pixel row by row
     for (let y = 0; y < canvas.height; y++) {
         // Hold pixels of each row
@@ -36,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         mappedImage.push(row);
     }
-    console.log(mappedImage);
 
     // Return relative brightness of pixel
     function relativeBrightness(red, green, blue) {
@@ -46,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
             (blue * blue) * 0.114
         )/100;
     }
+
+    */
 
 
     function init() {

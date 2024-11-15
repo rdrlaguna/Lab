@@ -4,7 +4,7 @@
     box-sizing: border-box;
     background: black;
 }
-
+/* Adjust canvas size to image size */
 #canvas {
     position: absolute;
     top: 50%;
@@ -16,5 +16,4 @@
 
     
     border: solid 2px white;
-
 }
