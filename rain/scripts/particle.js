@@ -13,6 +13,12 @@ class Particle {
     }
 
     update(canvas) {
+        // Round down ad sintegers x and y coordinates
+        this.position1 = Math.floor(this.y);
+        this.position2 = Math.floor(this.x);
+        this.speed = mappedImage[this.position1][this.position2][0];
+
+
         // Change particle position
         this.y += this.velocity;
         // Reposition  particle on top of canvas
