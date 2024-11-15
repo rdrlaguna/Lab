@@ -35,8 +35,18 @@ function calculateBrightness(canvas, pixels){
     return map;
 }
 
-
-// Return relative brightness of pixel
+/**
+ * Calcualte relative brightness.
+ * 
+ * This functions takes RGB values as parameters and 
+ * calculates the relative breightness of one pixel.
+ * It returns a number representing relative brightness.
+ * 
+ * @param {number} red - A number representing red in RGB.
+ * @param {number} green - A number representing green in RGB.
+ * @param {number} blue - A number representing blue in RGB.
+ * @returns {number} - A float representing the brightness of one pixel.
+ */
 function relativeBrightness(red, green, blue) {
     return Math.sqrt(
         (red * red) * 0.299 +
@@ -46,6 +56,7 @@ function relativeBrightness(red, green, blue) {
 }
 
 
+// Export functions
 const Pixels = {
     calculateBrightness
 }
