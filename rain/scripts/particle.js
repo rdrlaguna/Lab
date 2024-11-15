@@ -14,7 +14,7 @@ class Particle {
         // Change particle position
         this.y += this.velocity;
         // Reposition  particle on top of canvas
-        if (this.y >= canvas.heigth) {
+        if (this.y >= canvas.height) {
             this.y = 0;
             this.x = Math.random() * canvas.width;
         }

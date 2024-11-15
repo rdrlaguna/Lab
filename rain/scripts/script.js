@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     canvas.height = 706;
 
     // Draw image on canvas
-    ctx.drawImage(skull, 0, 0, canvas.width, canvas.height);
+    // ctx.drawImage(skull, 0, 0, canvas.width, canvas.height);
 
     // Hold all particles
     let particles = [];
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.drawImage(skull, 0, 0, canvas.width, canvas.height);
         ctx.globalAlpha = 0.05;
         ctx.fillStyle = 'rgb(0, 0, 0)';
-        ctx.fillRect(0, 0, canvas.width, canvas.heigth);
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         // Draw each particle in the array
         particles.forEach(particle => {
