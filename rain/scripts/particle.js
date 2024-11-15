@@ -7,7 +7,7 @@ class Particle {
         // Particle attributes
         this.speed = 0;
         this.velocity = Math.random() * 0.5;
-        this.size = Math.random() * 1.5 + 1;
+        this.size = Math.random() * 0.5 + 1;
         this.position1 = Math.floor(this.y);
         this.position2 = Math.floor(this.x);
     }
