@@ -31,6 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Return relative brightness of pixel
+    function relativeBrightness(red, green, blue) {
+        return Math.sqrt(
+            (red * red) * 0.299 +
+            (green * green) * 0.587 +
+            (blue * blue) * 0.114
+        )/100;
+    }
+
 
     function init() {
         // Populate the particles array with new particles
