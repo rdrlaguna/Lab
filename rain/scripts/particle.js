@@ -1,4 +1,10 @@
 // Create particle class
+
+/**
+ *  Creates a new Particle object.
+ * 
+ * @param {HTMLCanvasElement} canvas - The html canvas element where particles are drawn.
+ */
 export class Particle {
     constructor(canvas) {
         // Particle position
@@ -12,6 +18,14 @@ export class Particle {
         this.position2 = Math.floor(this.x);
     }
 
+    /**
+     * Updates the position of the particle based on its current position and
+     * on the brightness of the image pixel that shares its location.
+     * This method should be called to animate the particle. 
+     * 
+     * @param {HTMLCanvasElement} canvas - The html canvas element where particles are drawn.
+     * @param {number[]} pixelMap - An array of numbers representing the brightness of each pixel. 
+     */
     update(canvas, pixelMap) {
         // Round down ad sintegers x and y coordinates
         this.position1 = Math.floor(this.y);
@@ -19,7 +33,6 @@ export class Particle {
         // Adjust particle speed according pixel's brigthness
         this.speed = pixelMap[this.position1][this.position2][0];
         let movement = (2.5 - this.speed) + this.velocity
-
 
         // Change particle position
         this.y += movement;
@@ -29,7 +42,13 @@ export class Particle {
             this.x = Math.random() * canvas.width;
         }
     }
-
+    
+    /**
+     * Draws the particle on the given canvas context.
+     * This method should be used to render the particle on the canvas.
+     * 
+     * @param {CanvasRenderingContext2D} context - The 2D context of the canvas where the particle will be drawn.
+     */
     draw(context) {
         // Draw particle on canvas
         context.beginPath();
@@ -48,7 +67,7 @@ export class Particle {
  * It returns an array of Particle objects which lenght is the number passed in
  * as an argument.
  * 
- * @param {HTMLCanvasElement} canvas - The html canvas element where particles are created.
+ * @param {HTMLCanvasElement} canvas - The html canvas element where particles are drawn.
  * @param {number} totalParticles - The total number of Particles inside the returned array.
  * @returns {Particle[]} - An array of Particle objects representing particles inside canvas.
  */
