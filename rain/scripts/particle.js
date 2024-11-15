@@ -38,3 +38,24 @@ export class Particle {
         context.fill();
     }
 }
+
+
+    
+function getParticles(canvas, totalParticles) {
+
+    let particlesArray = []
+
+    // Populate the particles array with new particles
+    for (let i = 0; i < totalParticles; i++) {
+        particlesArray.push(new Particle(canvas));
+    }
+
+    return particlesArray;
+}
+
+
+const Particles = {
+    getParticles
+}
+
+export default Particles;
