@@ -3,7 +3,6 @@ import Particles from "./particle.js";
 import Pixels from "./pixels.js";
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
     // Canvas configuration
     const canvas = this.getElementById('canvas');
