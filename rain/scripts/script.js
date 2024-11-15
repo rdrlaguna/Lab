@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Draw each particle in the array
         particles.forEach(particle => {
-            particle.update(canvas);
+            particle.update(canvas, mappedImage);
             particle.draw(ctx);
         })
         requestAnimationFrame(animate);

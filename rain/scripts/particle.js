@@ -6,21 +6,23 @@ class Particle {
         this.y = 0;
         // Particle attributes
         this.speed = 0;
-        this.velocity = Math.random() * 3.5;
+        this.velocity = Math.random() * 0.5;
         this.size = Math.random() * 1.5 + 1;
         this.position1 = Math.floor(this.y);
         this.position2 = Math.floor(this.x);
     }
 
-    update(canvas) {
+    update(canvas, pixelMap) {
         // Round down ad sintegers x and y coordinates
         this.position1 = Math.floor(this.y);
         this.position2 = Math.floor(this.x);
-        this.speed = mappedImage[this.position1][this.position2][0];
+        // Adjust particle speed according pixel's brigthness
+        this.speed = pixelMap[this.position1][this.position2][0];
+        let movement = (2.5 - this.speed) + this.velocity
 
 
         // Change particle position
-        this.y += this.velocity;
+        this.y += movement;
         // Reposition  particle on top of canvas
         if (this.y >= canvas.height) {
             this.y = 0;
