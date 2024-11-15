@@ -1,6 +1,8 @@
-import Pixels from "./pixels.js";
-import Particles from "./particle.js";
 import Images from "./image.js";
+import Particles from "./particle.js";
+import Pixels from "./pixels.js";
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // Canvas configuration
