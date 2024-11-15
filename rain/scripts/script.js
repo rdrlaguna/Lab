@@ -34,7 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
             ];
             row.push(cell);
         }
+        mappedImage.push(row);
     }
+    console.log(mappedImage);
 
     // Return relative brightness of pixel
     function relativeBrightness(red, green, blue) {
