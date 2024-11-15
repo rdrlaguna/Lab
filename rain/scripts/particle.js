@@ -7,13 +7,15 @@
  */
 export class Particle {
     constructor(canvas) {
-        // Particle position
+        // Particle position, coordinates x and y
         this.x = Math.random() * canvas.width;
         this.y = 0;
-        // Particle attributes
+        // Particle velocity at which it moves
         this.speed = 0;
         this.velocity = Math.random() * 0.5;
+        // Particle size (dimaeter)
         this.size = Math.random() * 0.5 + 1;
+        // Particle position as integer. Maps to image pixels
         this.position1 = Math.floor(this.y);
         this.position2 = Math.floor(this.x);
     }
@@ -42,7 +44,7 @@ export class Particle {
             this.x = Math.random() * canvas.width;
         }
     }
-    
+
     /**
      * Draws the particle on the given canvas context.
      * This method should be used to render the particle on the canvas.
