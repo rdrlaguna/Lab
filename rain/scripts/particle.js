@@ -8,6 +8,8 @@ class Particle {
         this.speed = 0;
         this.velocity = Math.random() * 3.5;
         this.size = Math.random() * 1.5 + 1;
+        this.position1 = Math.floor(this.y);
+        this.position2 = Math.floor(this.x);
     }
 
     update(canvas) {
