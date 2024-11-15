@@ -40,7 +40,18 @@ export class Particle {
 }
 
 
-    
+/**
+ *  Populate an array with n number of Particles
+ * 
+ * This function takes a number of Particles as argument and the html
+ * canvas element where each of those particles is going to be created.
+ * It returns an array of Particle objects which lenght is the number passed in
+ * as an argument.
+ * 
+ * @param {HTMLCanvasElement} canvas - The html canvas element where particles are created.
+ * @param {number} totalParticles - The total number of Particles inside the returned array.
+ * @returns {Particle[]} - An array of Particle objects representing particles inside canvas.
+ */
 function getParticles(canvas, totalParticles) {
 
     let particlesArray = []
@@ -49,11 +60,11 @@ function getParticles(canvas, totalParticles) {
     for (let i = 0; i < totalParticles; i++) {
         particlesArray.push(new Particle(canvas));
     }
-
     return particlesArray;
 }
 
 
+// Export functions
 const Particles = {
     getParticles
 }
