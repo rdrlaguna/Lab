@@ -1,5 +1,5 @@
 // Create particle class
-class Particle {
+export class Particle {
     constructor(canvas) {
         // Particle position
         this.x = Math.random() * canvas.width;

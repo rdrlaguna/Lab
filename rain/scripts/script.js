@@ -1,4 +1,5 @@
 import Pixels from "./pixels.js";
+import {Particle} from "./particle.js";
 
 
 document.addEventListener('DOMContentLoaded', function() {
