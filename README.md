@@ -109,7 +109,7 @@ Each Frame:
 - A speed multiplier is applied to each particle based on brightness.
 - Particles are redrawn at their new position, creating a falling effect.
 
-## 4. Animation
+### 4. Animation
 
 The ```requestAnimationFrame``` method is used for smooth animation by calling the function responsible for updating particle positions at the optimal frame rate.
 
