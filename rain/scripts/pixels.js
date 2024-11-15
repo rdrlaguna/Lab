@@ -1,6 +1,17 @@
 // Pixel related functions
 
-
+/**
+ * Calcualte relative brightness on each pixel.
+ * 
+ * This function takes an array of numbers representing RGBA values of each pixel
+ * on an image which size is the canvas size. It loops thought the image's pixels,
+ * getting it's RGB values and calculating the relative brightness for each pixel.
+ * It returns an array with the relative brightness of each pixel.
+ * 
+ * @param {HTMLCanvasElement} canvas - An html canvas element.
+ * @param {[number]} pixels - An array of numbers representing RGBA values.
+ * @returns {[number]} - Returns an array of numbers representing each pixel brightness.
+ */
 function calculateBrightness(canvas, pixels){
 
     let map = []

@@ -1,4 +1,3 @@
-
 import Pixels from "./pixels.js";
 
 
@@ -37,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.fillStyle = 'rgb(0, 0, 0)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.globalAlpha = 0.02;
+        
         // Draw each particle in the array
         particles.forEach(particle => {
             particle.update(canvas, mappedImage);
