@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const red = pixels.data[(y * 4 * pixels.width) + (x * 4)];
             const green = pixels.data[(y * 4 * pixels.width) + (x * 4 + 1)];
             const blue = pixels.data[(y * 4 * pixels.width) + (x * 4 + 2)];
+            const brightness = relativeBrightness(red, green, blue);
+            const cell = [
+                cellBrightness = brightness,
+            ];
+            row.push(cell);
         }
     }
 
