@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Canvas configuration
     const canvas = this.getElementById('canvas');
     const ctx = canvas.getContext('2d');
-    console.log(ctx);
-    canvas.width = canvas.clientWidth;
-    canvas.heigth = canvas.clientHeight;
+
+    canvas.width = 500;
+    canvas.height = 706;
 
     // Draw image on canvas
-    ctx.drawImage(skull, 0, -80, canvas.width, 300);
+    ctx.drawImage(skull, 0, 0, canvas.width, canvas.height);
 
     // Hold all particles
     let particles = [];
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function animate() {
         // Draw semitransparent rectangle over cnavas
+        ctx.drawImage(skull, 0, 0, canvas.width, canvas.height);
         ctx.globalAlpha = 0.05;
         ctx.fillStyle = 'rgb(0, 0, 0)';
         ctx.fillRect(0, 0, canvas.width, canvas.heigth);
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         requestAnimationFrame(animate);
     }
 
-    // animate();
+    animate();
 
     
 });
